@@ -14,9 +14,10 @@ class QuizBrain:
         user_answer = input(f"{self.question_number}: {current_q.text} Type True or False and press Enter. ")
         self.check_answer(user_answer, current_q.answer)
 
-    def still_has_questions(self):
+    @staticmethod
+    def still_has_questions():
         num_of_questions = len(data.question_data)
-        return self.question_number == num_of_questions
+        return num_of_questions
 
     def check_answer(self, user_answer, correct_answer):
         if user_answer.lower() == correct_answer.lower():
