@@ -13,6 +13,3 @@ for question in question_data:
 new_quiz_brain = QuizBrain(question_bank)
 while new_quiz_brain.still_has_questions():
     new_quiz_brain.next_question()
-
-
-
