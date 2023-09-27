@@ -19,6 +19,10 @@ class QuizBrain:
         num_of_questions = len(data.question_data)
         return num_of_questions
 
+    def end_game(self):
+        print("You've completed the quiz!")
+        print(f"Your final score was: {self.score}/{self.question_number}")
+
     def check_answer(self, user_answer, correct_answer):
         if user_answer.lower() == correct_answer.lower():
             print("Correct!")
